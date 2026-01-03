@@ -1,7 +1,7 @@
-package br.com.AdriellyVitoria.erudio.exception.hadler;
+package br.com.erudio.exception.hadler;
 
-import br.com.AdriellyVitoria.erudio.exception.ExceptionResponse;
-import br.com.AdriellyVitoria.erudio.exception.ResourceNotFoundException;
+import br.com.erudio.exception.ExceptionResponse;
+import br.com.erudio.exception.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

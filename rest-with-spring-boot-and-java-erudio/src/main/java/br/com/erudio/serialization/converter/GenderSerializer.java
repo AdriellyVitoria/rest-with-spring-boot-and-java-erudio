@@ -1,4 +1,4 @@
-package br.com.erudio.serializer;
+package br.com.erudio.serialization.converter;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;

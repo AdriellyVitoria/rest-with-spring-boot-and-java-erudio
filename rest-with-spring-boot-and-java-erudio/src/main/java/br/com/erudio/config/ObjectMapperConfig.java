@@ -1,6 +1,5 @@
 package br.com.erudio.config;
 
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
 import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
@@ -17,7 +16,7 @@ public class ObjectMapperConfig {
         SimpleFilterProvider filters = new SimpleFilterProvider()
                 .addFilter("PersonFilter",
                         SimpleBeanPropertyFilter.serializeAllExcept("sensitiveData"));
-        objectMapper.setFilters(filters);
+        objectMapper.setFilterProvider(filters);
         return objectMapper;
     }
 }

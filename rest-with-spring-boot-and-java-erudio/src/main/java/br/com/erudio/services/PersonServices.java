@@ -1,6 +1,5 @@
 package br.com.erudio.services;
 
-import br.com.erudio.data.dto.v2.PersonDTOV2;
 import br.com.erudio.exception.ResourceNotFoundException;
 import br.com.erudio.data.dto.v1.PersonDTO;
 import static br.com.erudio.mapper.ObjectMapper.parseListObjects;
@@ -50,13 +49,6 @@ public class PersonServices {
 
         var entity = parseObject(person, Person.class);
         return parseObject(respository.save(entity), PersonDTO.class);
-    }
-
-    public PersonDTOV2 createV2(PersonDTOV2 person) {
-        logger.info("Creating one Person!");
-
-        var entity = converter.convertDTOtoEntity(person);
-        return   converter.convertEntityToDTO(respository.save(entity));
     }
 
     public PersonDTO upadete(PersonDTO person) {
